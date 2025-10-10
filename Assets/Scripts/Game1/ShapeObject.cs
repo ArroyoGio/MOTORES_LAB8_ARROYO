@@ -1,16 +1,25 @@
+using System;
 using UnityEngine;
 
 public class ShapeObject : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public ColorShapeData shapeData;
+    private SpriteRenderer spriteRenderer;
+
+    public static event Action<Sprite> OnChangeShape;
+
+    private void Awake()
     {
-        
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (shapeData != null)
+            spriteRenderer.sprite = shapeData.sprite;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if (other.CompareTag("Player") && shapeData != null)
+        {
+            OnChangeShape?.Invoke(shapeData.sprite);
+        }
     }
 }
