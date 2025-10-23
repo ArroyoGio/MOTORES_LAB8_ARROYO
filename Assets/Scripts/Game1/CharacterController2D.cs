@@ -19,6 +19,6 @@ public class CharacterController2D : MonoBehaviour
 
     private void FixedUpdate()
     {
-        myRBD2.velocity = moveInput * velocity;
+        myRBD2.linearVelocity = moveInput * velocity;
     }
 }

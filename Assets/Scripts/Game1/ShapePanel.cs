@@ -3,20 +3,20 @@ using UnityEngine.UI;
 
 public class ShapePanel : MonoBehaviour
 {
-    [SerializeField] private Image shapeImage;
+    [SerializeField] private Image shapeDisplay;
 
     private void OnEnable()
     {
-        ShapeObject.OnChangeShape += UpdateShape;
+        ShapeObject.OnChangeShape += UpdateShapeUI;
     }
 
     private void OnDisable()
     {
-        ShapeObject.OnChangeShape -= UpdateShape;
+        ShapeObject.OnChangeShape -= UpdateShapeUI;
     }
 
-    private void UpdateShape(Sprite newShape)
+    private void UpdateShapeUI(Sprite newSprite)
     {
-        shapeImage.sprite = newShape;
+        shapeDisplay.sprite = newSprite;
     }
 }

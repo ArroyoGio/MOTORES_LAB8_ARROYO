@@ -11,6 +11,7 @@ public class ShapeObject : MonoBehaviour
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+
         if (shapeData != null)
             spriteRenderer.sprite = shapeData.sprite;
     }

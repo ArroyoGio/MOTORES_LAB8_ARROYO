@@ -3,20 +3,20 @@ using UnityEngine.UI;
 
 public class ColorPanel : MonoBehaviour
 {
-    [SerializeField] private Image colorImage;
+    [SerializeField] private Image colorDisplay;
 
     private void OnEnable()
     {
-        ColorObject.OnChangeColor += UpdateColor;
+        ColorObject.OnChangeColor += UpdateColorUI;
     }
 
     private void OnDisable()
     {
-        ColorObject.OnChangeColor -= UpdateColor;
+        ColorObject.OnChangeColor -= UpdateColorUI;
     }
 
-    private void UpdateColor(Color newColor)
+    private void UpdateColorUI(Color newColor)
     {
-        colorImage.color = newColor;
+        colorDisplay.color = newColor;
     }
 }

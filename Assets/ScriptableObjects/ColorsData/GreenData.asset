@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef7b4c59346030548a63945ee9682e62, type: 3}
-  m_Name: BlueColorData
+  m_Name: GreenData
   m_EditorClassIdentifier: 
-  color: {r: 0, g: 0.17970467, b: 1, a: 0}
+  color: {r: 0.3340696, g: 1, b: 0, a: 1}
   sprite: {fileID: 0}

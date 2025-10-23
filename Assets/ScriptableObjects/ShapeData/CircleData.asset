@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef7b4c59346030548a63945ee9682e62, type: 3}
-  m_Name: RoseColorData 1
+  m_Name: CircleData
   m_EditorClassIdentifier: 
-  color: {r: 1, g: 0, b: 0.5139637, a: 0}
-  sprite: {fileID: 0}
+  color: {r: 0, g: 0, b: 0, a: 0}
+  sprite: {fileID: -2413806693520163455, guid: 6b6a79bd509fa9e43a4dc30b4ad31634, type: 3}
