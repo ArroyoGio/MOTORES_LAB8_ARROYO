@@ -296,6 +296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 204509062}
   - component: {fileID: 204509064}
+  - component: {fileID: 204509065}
   - component: {fileID: 204509063}
   m_Layer: 5
   m_Name: TextVida
@@ -422,6 +423,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 204509061}
   m_CullTransparentMesh: 1
+--- !u!114 &204509065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204509061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9eed97c1dc5e81418592321cb36d99d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txtLife: {fileID: 204509063}
 --- !u!1 &238074312
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,6 +760,7 @@ GameObject:
   - component: {fileID: 536379376}
   - component: {fileID: 536379375}
   - component: {fileID: 536379374}
+  - component: {fileID: 536379377}
   - component: {fileID: 536379373}
   m_Layer: 0
   m_Name: Corazon
@@ -769,7 +784,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -845,6 +860,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &536379377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536379372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88227f0979c5b7a4d893501ab0b6bb48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeRecover: 1
 --- !u!1 &537965554
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,6 +884,7 @@ GameObject:
   - component: {fileID: 537965558}
   - component: {fileID: 537965557}
   - component: {fileID: 537965556}
+  - component: {fileID: 537965559}
   - component: {fileID: 537965555}
   m_Layer: 0
   m_Name: Moneda
@@ -879,7 +908,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -953,6 +982,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &537965559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537965554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 340a0c0c32774ca428ac98c9480ee36a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &635972491
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,6 +1127,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 635972491}
   m_CullTransparentMesh: 1
+--- !u!1 &851963016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 851963018}
+  - component: {fileID: 851963017}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &851963017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851963016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 141ea4c667c309941ac2ac6ee4f84a5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLife: 3
+  playerCoins: 0
+--- !u!4 &851963018
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851963016}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.6409097, y: 8.513216, z: 16.086954}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &866809565
 GameObject:
   m_ObjectHideFlags: 0
@@ -1895,6 +1982,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1374029721}
   - component: {fileID: 1374029723}
+  - component: {fileID: 1374029724}
   - component: {fileID: 1374029722}
   m_Layer: 5
   m_Name: TextMoneda
@@ -2021,6 +2109,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1374029720}
   m_CullTransparentMesh: 1
+--- !u!114 &1374029724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374029720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 441a58321a1adc04b923ab55f1084d67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txtCoins: {fileID: 1374029722}
 --- !u!1 &1434164353
 GameObject:
   m_ObjectHideFlags: 0
@@ -2830,3 +2931,4 @@ SceneRoots:
   - {fileID: 536379376}
   - {fileID: 537965558}
   - {fileID: 1993511590}
+  - {fileID: 851963018}
